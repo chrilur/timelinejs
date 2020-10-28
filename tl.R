@@ -5,25 +5,25 @@ mal <- read.csv("data/tltest.csv")
 kolonner <- names(mal)
 
 #Lese skjemasvar
-data <- read.csv("tidslinjesvar.csv", fileEncoding = "UTF-8")
+data <- read.csv("skjemasvar.csv", fileEncoding = "UTF-8")
 
-#Trekk ut år, måned og dag
-fodt.aar <- substring(data$Fødselsdato,7,10)
-fodt.mnd <- substring(data$Fødselsdato,4,5)
-fodt.dag <- substring(data$Fødselsdato,1,2)
+#Trekk ut Ã¥r, mÃ¥ned og dag
+fodt.aar <- substring(data$FÃ¸dselsdato,7,10)
+fodt.mnd <- substring(data$FÃ¸dselsdato,4,5)
+fodt.dag <- substring(data$FÃ¸dselsdato,1,2)
 
-# Gjør om til tall                    
+# GjÃ¸r om til tall                    
 fodt.aar <- as.integer(fodt.aar)
 fodt.mnd <- as.integer(fodt.mnd)
 fodt.dag <- as.integer(fodt.dag)
 
 kjonn <- data$Du.er.
 
-#La headline være navnet
+#La headline vÃ¦re navnet
 headline <- data$Ditt.navn
 
-#La text være det gøye som skjedde
-txt <- paste("Det gøye som skjedde i fødselsåret mitt:", data[,4])
+#La text vÃ¦re det gÃ¸ye som skjedde
+txt <- paste("Det gÃ¸ye som skjedde i fÃ¸dselsÃ¥ret mitt:", data[,4])
 
 video <- data[,5]
 
